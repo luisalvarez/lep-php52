@@ -73,7 +73,6 @@ RUN buildDeps=" \
   && apt-get purge -y --auto-remove $buildDeps \
   && make clean
 
-COPY docker-php-ext-* /usr/local/bin/
 COPY apache/php-fpm.conf /usr/local/etc/php/
 
 # Setup timezone to Etc/UTC and fix extension path
